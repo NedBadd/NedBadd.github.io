@@ -7,7 +7,7 @@ body {
   line-height: 1.65;
   color: #222;
   background: #fff;
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -72,25 +72,29 @@ main { padding: 2.5rem 0 3rem; }
 /* ── PROJECT SECTION ── */
 
 .project {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   padding: 2rem 0;
   border-top: 1px solid #ddd;
 }
 
 .project-images {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
+  width: 80vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 .project-images img {
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 16/9;
   object-fit: cover;
-  background: #eee; /* placeholder colour if image is missing */
+  background: #eee;
 }
+
 
 .project-info { display: flex; flex-direction: column; gap: 0.6rem; }
 

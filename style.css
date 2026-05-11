@@ -1,0 +1,216 @@
+/* Basic reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Georgia, serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #222;
+  background: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+a { color: #0057b8; }
+a:hover { text-decoration: none; }
+
+img { max-width: 100%; display: block; }
+
+/* ── HEADER ── */
+
+header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 2rem 0 1.5rem;
+  border-bottom: 1px solid #ddd;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+header h1 {
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+
+.title-image {
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.title-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+nav { display: flex; gap: 1.5rem; }
+
+nav a {
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  color: #555;
+  text-decoration: none;
+}
+nav a:hover { color: #222; }
+
+/* ── MAIN ── */
+
+main { padding: 2.5rem 0 3rem; }
+
+.intro {
+  font-family: sans-serif;
+  color: #555;
+  margin-bottom: 3rem;
+  font-size: 0.95rem;
+}
+
+/* ── PROJECT SECTION ── */
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-top: 1px solid #ddd;
+}
+
+.project-images {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-images img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  background: #eee; /* placeholder colour if image is missing */
+}
+
+.project-info { display: flex; flex-direction: column; gap: 0.6rem; }
+
+.project-info h2 { font-size: 1.2rem; font-weight: normal; }
+.project-info h2 a { color: #222; text-decoration: none; }
+.project-info h2 a:hover { text-decoration: underline; }
+
+.meta {
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.project-info p { font-size: 0.95rem; color: #444; }
+
+.project-info > a {
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+/* ── FOOTER ── */
+
+footer {
+  border-top: 1px solid #ddd;
+  padding: 1.5rem 0;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+footer a { color: #999; }
+
+/* ── DETAIL PAGE ── */
+
+.back {
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  margin: 2rem 0 1.5rem;
+  color: #555;
+  text-decoration: none;
+}
+.back:hover { text-decoration: underline; color: #222; }
+
+.detail-header { padding-bottom: 1.5rem; border-bottom: 1px solid #ddd; margin-bottom: 2rem; }
+.detail-header h2 { font-size: 1.8rem; font-weight: normal; margin-bottom: 0.4rem; }
+.detail-header .meta { font-family: sans-serif; font-size: 0.85rem; color: #888; }
+
+.detail-body { max-width: 640px; }
+
+.detail-body h3 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin: 2rem 0 0.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.3rem;
+}
+
+.detail-body p { margin-bottom: 1rem; color: #333; font-size: 0.95rem; }
+
+.detail-body ul, .detail-body ol {
+  padding-left: 1.4rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.detail-body li { margin-bottom: 0.3rem; }
+
+.detail-body code {
+  font-family: monospace;
+  font-size: 0.875em;
+  background: #f4f4f4;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+.detail-body pre {
+  background: #f4f4f4;
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 1.2rem;
+  font-size: 0.875rem;
+}
+.detail-body pre code { background: none; padding: 0; }
+
+/* Photos on detail page */
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.photos img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  background: #eee;
+}
+
+.photo-single {
+  width: 100%;
+  margin: 1.5rem 0;
+  background: #eee;
+}
+
+figcaption {
+  font-family: sans-serif;
+  font-size: 0.78rem;
+  color: #999;
+  margin-top: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 560px) {
+  .project { grid-template-columns: 1fr; }
+  header { flex-direction: column; }
+}

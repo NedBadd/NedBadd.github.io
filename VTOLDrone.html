@@ -65,30 +65,92 @@
 
       </p>
       <div class="photos">
+        <img src="/images/drone/flyingwingwing.jpg" alt="drone wing1" />
+        <figcaption>The raw hot wire cut wing. A new type of insulation foam was used, it was lighter and stiffer, but the larger chunks of foam that make it up made it difficult to <br>
+          keep the hot wire under enough tension to leave a smooth surface finish. It was also not very sandable. The packing tape smoothed out the surface enough <br>
+          but it still wasn't ideal. It was especially hard to cut tapered, swept or twisted wings, design elements which are all present in flying wings.</figcaption>
         <img src="/images/drone/dronemk1.jpg" alt="drone mk1" />
         <figcaption>Drone MK1, with a hot wire cut foam-covered-in-tape wing. It had carbon spars, but it was still not very structural, as you can see it split completely in half <br>
-        for VTOL transition.</figcaption>
+        for VTOL transition. Folding actuation is done just by a directly mounted large servo. Knowing more about quads now there's no way this would've been rigid <br>
+        enough to not cause problems for the quad stabilisation.</figcaption>
       </div>
 
-      <h3>The first attempt at the folding drone</h3>
+      <h3>The modern day</h3>
+      <p>
+        The mk1 version was informative, even though I never attempted to fly it. The mode transition was all programmed in my transmitter, and I thought I might get away with only having any control input from the flight controller. 
+        Now I own a 3d printer I knew I had to leave the hotwire cutter in 2017 and try out the aforementioned PLA-Aero. PLA-Aero is a lightweight PLA which expands in the nozzle, lowering the overall density of the printed part at the expense of strength.
+        Being 3d printed though, geometry can be tailored to offset the strength lost, and the lower weight is a worthwhile trade.
+      </p>
 
-      <ul>
-        <li>First challenge and how you got past it.</li>
-        <li>Second challenge and how you got past it.</li>
+      <h3>The challenges of PLA-Aero</h3>
+      <p>
+        PLA-Aero is, as mentioned, an active foaming filament. Foaming additives in the filament begin to sublimate when the filament is heated/ extruded. Because this reaction is taking place in the nozzle, you can't simply load your filament and 
+        press print like you usually can with Bambu printers. Usually FDM printing allows for accurate extrusion by simply retracting the filament feed from the nozzle as the exruder head travels from one position in space in the build volume to another.
+        This means any geometry can be sliced easily since the printer is free to move from any position to another to continue the print. <br> <br>
+
+        You can't do that with foaming filament. Any print has to be completed in a continuous line, from start to finish. This inherently limits the geometry you can print, and so this should really be considered from the design stage. 
+        
+        I can't unfortunately, as much as I wish I could, claim this design approach to be original.  <a href="https://www.youtube.com/watch?v=XPXN0QejqM0?t=536" target="_blank">Tom Stanton explains this probably better than I just did here</a>.
+        I may have shamelessly copied the method, but there was enough work in just replicating this since:
+
+        <ul>
+        <li>His design is a plain wing, no taper, sweep, or twist. My flying wing has all three.</li>
+        <li>The internal structure needs to be created in CAD in such a way that the slicer not only CAN interpret it as a single continuous line, but DOES. Despite the Bambu slicer featuring "Spiral Vase Mode" this is still easier said than done.</li>
       </ul>
-
-      <h3>Results</h3>
+      Parametric CAD like Onshape is not really intended nor built for even model aircraft structures featuring every detail of a surface like this. I sunk lots of time and effort into creating a model that was workable yet still featured the detail I needed.
+      </p>
+      <div class="photos">
+        <img src="/images/drone/3dprintwing.png" alt="3d printed wing" />
+        <figcaption>Many hours later, the CAD model which slicer agrees is made from a continuous path all the way though with necessary sweep, taper and twist. </figcaption>
+        <img src="/images/drone/slicerwing.png" alt="3d printed wing22" />
+        <figcaption>Slicer showing the path taken for an individual layer.</figcaption>
+        <img src="/images/drone/wing1.jpg" alt="3d printed wing" />
+        <figcaption>Test print. This one weighs 4g.</figcaption>
+        <img src="/images/drone/wing2.jpg" alt="3d printed wing2" />
+      </div>
+      <h3>Before we even get to the trying to fly the plane</h3>
       <p>
-        How did it turn out? Quantify where possible. If it's a physical thing,
-        describe what it does in practice.
+        Leveraging my past experience, I feel it would be unwise to have my first experience with ardupilot be the moment I try to maiden this 3d printed drone. It would be good to verify that all the electronics work, 
+        and that I am capable of getting them all to talk to each other etc. Further, I haven't flown a custom made quad-copter before, so it might be wise to brush up on 
+        how they fly in a more simple and lower stakes environment. Good news: drones are just electronics held out on sticks, so I went and found some wooden dowel in my backyard and designed and 3d printed the components in an afternoon.
       </p>
 
-      <h3>What I'd do differently</h3>
+      <div class="photos">
+        <img src="/images/drone/stick2.png" alt="Stick drone" />
+        <figcaption> CAD model of my stick drone. </figcaption>
+        <img src="/images/drone/sticks.JPG" alt="sticks with drone" />
+        <figcaption>Early stage of the build.</figcaption>
+        <img src="/images/drone/dronefin.JPG" alt="The finished drone" />
+        <figcaption>The finished drone. Mechanically thrown together in about two days, took longer than that to figure out the flight controller. What I like about this <br>
+        design is its simple, robust, and cheap. Perfect for someone like me to use as a test mule.</figcaption>
+      </div>
+      <h3>Quad testing</h3>
       <p>
-        Hindsight notes. What would you change if you started over?
+        After some PID tuning, and ironing out hardware problems, the quad was flying great. After a bit of flying practise I went straight to experimentation to see what mechanical perculiaraties the 
+        flight controller could overcome. I swapped out one of the set of four motors for another one of a different kv rating. That flew fine. I swapped out propellers one at a time to see if that made a difference. Nope.
+        This video shown below is proof that at least within reason the drone flies perfectly well with a mixture of different motors, props etc.
       </p>
+      <iframe
+        width="728"
+        height="441"
+        src="https://www.youtube.com/embed/1HMXNotXq4g"
+        allowfullscreen>
+      </iframe>
 
+      <h3>Stay tuned</h3>
+      <p>
+        This project is ongoing and is my main focus at the moment. I am still doing detailed design of the airframe and will start printing soon. I hope to put together a nicely edited video that will make this easier to digest.
+        I hope to:
+      </p>
+      <ul>
+        <li>Once this version is flying, create my own flying wing design (this one was borrowed from the internet) which is tuned to work with more suitable electronics. i.e. optimise the design for efficiency not just prove it works.</li>
+        <li>Mix and match motor pairs, so the cruise motors are more efficient while the VTOL motors are small and light. I have proven within reason the FC can control minor differences but I would prefer 
+          to have ~8-9inch props on 1300kv motors for cruise and 5inch props on ~2300kv ish motors for VTOL. That may involve custom code but I'm interested to find out. 
+        </li>
+      </ul>
     </div>
+  
+    <a href="../index.html" class="back">← Back to projects</a>
   </main>
 
   <footer>

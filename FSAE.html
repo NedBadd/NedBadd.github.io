@@ -139,6 +139,44 @@
             messily into an excel spreadsheet.</figcaption>
       </div>
 
+      <h3>R21e Design work</h3>
+      <p>
+        The team had plans for significant packaging changes for the following iteration of car. Most notably was the shift from the well developed single motor to individual hub motors with planetary gears. This meant the whole mechanical packaging concept
+        (and hence aero) was due to change significantly. <br><br>
+        
+        At this stage, there wasn't a great deal of experience in the team regarding aerodynamic design, however myself and another team member tackled that together. Over the course of 2020, we developed our skills in CFD, bounced ideas around, and developed
+        a totally new aerodynamics package. I'm skipping over months of CFD mesh errors, figuring out post processing, beginning to automate that, weekly meetings, discussions around design for manufacture etc.<br><br>
+
+        Between myself and the other designer, we did ~200 3d CFD simulations mostly completely manually. We learnt a lot about how flow should be developed along an open wheeled race car. <br><br>
+
+        The front wing was were I spent most of my effort. I designed, placed and tuned the so called side wings, and tuned the slot gaps for the second and third elements of the undertray, and designed the new rear wing endplates, while the rear wing 
+        elements were carried over since we had a well functioning DRS mechanism for that design. My partner designed the undertray, and diffuser, as well as all the mounting hardware and integration to the chassis to go along with those components.
+      </p>
+        <div class="photos">
+        <img src="/images/FSAE/r22edev.gif" alt="Gif of r21/2e front wing development" />
+          <figcaption>This gif shows the major design iterations evaluated before landing on the final design. Each one had numerous slot gap and Angle of Attack (AoA) studies conducted. <br> 
+          Each one was also evaluated for complexity of manufacture, with high value being placed on low part/ mold count as it was experienced first hand the amount of<br>
+          work required to make even only one aerodynamic subassembly. </figcaption>
+          <img src="/images/FSAE/car.JPG" alt="R21/2e Aero kit" />
+          <figcaption>Renders of the full aero kit. The Rear wing endplates were later simplified.</figcaption>
+        <img src="/images/FSAE/car2.JPG" alt="R21/2e Aero kit2" />
+          <figcaption>Render of rear 3/4 view of aerokit.</figcaption>
+        <img src="/images/FSAE/fwmountfea.jpg" alt="Basic FEA on Front wing mount" />
+          <figcaption>Basic FEA on Front Wing mount. Developed to hopefully resist cone strikes as R19e's front wing mount would explode when wing to cone contact was achieved.<br>
+            I got a kick out of this because I think this was the first mechanical part I designed and optimized, which was then manufactured and showed up in our workshop.</figcaption>
+          <img src="/images/FSAE/fwmount.jpg" alt="Front wing mount" />
+          <figcaption>Notice the thicker lower section. Analysis showed that took the brunt of any cone strikes. Preventing buckling was the idea, however this design,  <br>
+            being laser cut, was far ahead of the previous one since it was cheap and quick to replace. The FEA served only to give me an idea as to the most stressed <br>
+            areas of the part so I could tailor fillets and thicknesses appropriately.</figcaption>
+      </div>
+      </p>
+
+      <h3>R21e Build</h3>
+
+      <p>
+        
+      </p>
+
       <h3>CFD Automation</h3>
       <p>
         I had never attempted anything really seriously computationally intensive, nor ever tried to script anything before. I could see how much time it would save me personally, but more importantly, I knew that this was critical in ensuring that our 
@@ -146,21 +184,27 @@
         but that's generally what it is.<br><br>
 
         FLUENT TEXT USER INTERFACE was the order of the year. I found a basic FSAE TUI journal file in an online youtube video. It was basic, but it had mesh improvement, definition of rotating wheels, unique mesh settings for a front wing, 
-        forward part of chassis, wheels and thats about it
-      </p>
-      <ul>
-        <li>dot pnt</li>
-        <li>dot pnt2nd</li>
-      </ul>
+        forward part of chassis, wheels and thats about it. It was a modest starting point.<br><br>
 
-      <h3>title2</h3>
-      <p>
-        yeah
+        At this point I was still working in named selections, where you use the names of your imported CAD bodies to set your mesh controls. Further, there were intermediate steps between CAD (Solidworks) and CFD, where you manually create the bodies of influence
+        like wake mesh volumes etc.
       </p>
 
-      <h3>fsae title</h3>
+      <h3>Final year project/ Capstone Project</h3>
       <p>
-        yeah
+        I chose to use my Capstone project to double down on FSAE design work. I felt I had progressed a long way since I did the design for the R22e front wing and side aero. I was very interested in the fundamentals aerodynamic design and knew that just performing the manufacturing
+        duties for the aero kit I had already done wouldn't be satisfying. I had more ideas I needed to try, and felt I would be working on improving my scripting further regardless of if it counted for marks or not.
+      </p>
+
+      <h3>Big takeaways regarding FSAE Aerodynamic Design</h3>
+      <p>
+        <ul>
+        <li> It was absolutely worthwhile investing the many many days developing my scripting. I could achieve in an hour what used to take weeks. As the architect of the entire system, I knew exactly what to do if any step in the 
+          process were to fail. I also had a serious legacy to leave newer members on the team, who weren't privvy to how much suffering my code would save them.
+        </li>
+        <li> Open wheel aerodynamics is all about wake management. FSAE is unique in the operating conditions our aerodynamic components must operate in are extreme. High yaw, slow speed. </li>
+        
+        </ul>
       </p>
       
     </div>

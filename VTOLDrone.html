@@ -20,43 +20,58 @@
     <a href="../index.html" class="back">← Back to projects</a>
 
     <div class="detail-header">
-      <h2>Project One Title</h2>
-      <p class="meta">Hardware · 2024 · <a href="https://github.com/yourusername/project-one">Source on GitHub</a></p>
+      <h2>VTOL 3d Printed Flying Wing</h2>
+      <p class="meta">Hardware · 2026 </p>
     </div>
 
     <!-- Main photo -->
     <figure>
-      <img class="photo-single" src="../images/project-1-main.jpg" alt="Describe what's shown" />
-      <figcaption>Caption explaining the photo.</figcaption>
+      <img class="photo-single" src="/images/drone/cad1.png" alt="Describe what's shown" />
+      <figcaption>Earlier version of the CAD Assembly. VTOL lift motors unfolded.</figcaption>
     </figure>
 
     <div class="detail-body">
 
       <h3>Overview</h3>
       <p>
-        What is this project? Give a plain explanation of what it does and why
-        you built it. No need to sell it — just describe it accurately.
+        As said in the intro, VTOL RPAS Drones seem a bit unelegant to me in their concept. This layout may not offer much tangible benefit, but doing something a bit strange is part of the fun. The idea is to make a folding airframe that is simply
+        an X quad in VTOL mode, and folds away two of the four motors for more efficient forward flight. These motors could in theory be unfolded for a burst of power in cruise, but a flying wing was chosen for (hopefully) an increase in efficiency, 
+        and therefore range and endurance. <br> <br>
+
+        Hobby racing drone electronics are used, and since acquiring a 3d printer I knew I had to try 3d printing an airframe. Bambu sell a filament called "PLA-Aero" which is advertised as ideal for printing RC aircraft so I knew I had to give that a go.
       </p>
 
-      <h3>How it works</h3>
+      <h3> Some background</h3>
       <p>
-        Explain the core mechanism. If it's hardware, describe the circuit or
-        physical system. If it's software, describe the data flow or key logic.
-        Go into as much technical depth as you want — this is the right place for it.
+        I have been flying drones (or RC Planes as they were known back in the mid 2000's) since I was a child. I have always loved aircraft and flying. During my time at uni an assignment required us to build a plane.
+        I had seen people online hot wire cutting their wings and even though it was going to take longer and weigh more than a foamboard plain wing, I wanted to do it anyway. I made a hot wire cutter at home using some bits of scrap
+        wood and a guitar string. Insulation foam from bunnings was used as stock I made aerofoil templates from bits of plywood cut out against a printed scale paper version.
       </p>
 
       <!-- Mid-page photos -->
       <div class="photos">
-        <img src="../images/project-1-detail-a.jpg" alt="Describe this photo" />
-        <img src="../images/project-1-detail-b.jpg" alt="Describe this photo" />
-        <img src="../images/project-1-detail-c.jpg" alt="Describe this photo" />
+        <img src="/images/drone/DAC.jpg" alt="Small version of me with my RC Aircraft, circa 2008" />
+          <figcaption>Small version of me with my RC Aircraft, at a local flying club, circa 2008.</figcaption>
+        <img src="/images/drone/hotwirecutter.jpg" alt="hot wire cutter" />
+          <figcaption>Home made hot wire cutter, made for a Uni assignment build. Note the spring and hinge to keep tension on the wire as it expands when heated.</figcaption>
+        <img src="/images/drone/hotwirewing.jpg" alt="Describe this photo" />
+          <figcaption>Finished wing with an aerofoil profile that I think looks pretty good for a home build. Glass fibre tape for stiffness, no spar.</figcaption>
       </div>
 
-      <h3>Challenges</h3>
+      <h3>The first attempt at the folding drone</h3>
       <p>
-        What was unexpectedly hard? What didn't work the first time?
-        This is usually the most interesting part to read.
+        The idea for the folding drone is quite old. At first, the idea was to have the airframe/ wing split in half along its entire length, at about the point of max thickness. I built an almost functional version of this design some years ago, before
+        ardupilot had tail sitting capabilities supported. Looking at videos online back then, everyone thought the "KK2" flight controller was the way to go for VTOL planes, so I got one of those. Even then, it was acceptionally outdated, with very limited documentation.
+
       </p>
+      <div class="photos">
+        <img src="/images/drone/dronemk1.jpg" alt="drone mk1" />
+        <figcaption>Drone MK1, with a hot wire cut foam-covered-in-tape wing. It had carbon spars, but it was still not very structural, as you can see it split completely in half <br>
+        for VTOL transition.</figcaption>
+      </div>
+
+      <h3>The first attempt at the folding drone</h3>
+
       <ul>
         <li>First challenge and how you got past it.</li>
         <li>Second challenge and how you got past it.</li>

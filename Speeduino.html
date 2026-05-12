@@ -20,47 +20,57 @@
     <a href="../index.html" class="back">← Back to projects</a>
 
     <div class="detail-header">
-      <h2>Project One Title</h2>
-      <p class="meta">Hardware · 2024 · <a href="https://github.com/yourusername/project-one">Source on GitHub</a></p>
+      <h2>Speeduino Build</h2>
+      <p class="meta">Electronics · Late 2025 </p>
     </div>
 
     <!-- Main photo -->
     <figure>
-      <img class="photo-single" src="../images/project-1-main.jpg" alt="Describe what's shown" />
-      <figcaption>Caption explaining the photo.</figcaption>
+      <img class="photo-single" src="/images/Speeduino/banner.JPG" alt="Speeduino" />
+      <figcaption>Speeduino board.</figcaption>
     </figure>
 
     <div class="detail-body">
 
       <h3>Overview</h3>
       <p>
-        What is this project? Give a plain explanation of what it does and why
-        you built it. No need to sell it — just describe it accurately.
+        Speeduino is an open source ECU which consists of a Arduino Mega board, and a custom PCB which must have the components soldered by the owner/ builder.
       </p>
 
-      <h3>How it works</h3>
+      <h3>The need</h3>
       <p>
-        Explain the core mechanism. If it's hardware, describe the circuit or
-        physical system. If it's software, describe the data flow or key logic.
-        Go into as much technical depth as you want — this is the right place for it.
+        Mappable ECUs offer significant advantages for those who like to work on their own cars. In my case, the car I am building this for was released in the early 1980s, and hence ECU technology has moved on significantly since then.
+        You have to be a bit mad to want to go to this level of DiY for a car, but if you're willing, Speeduino is shockingly good, and saves you hundreds if not thousands of dollars. Most importantly though, it's just 
+        really, really cool.<br><br>
+        After working in electronics/ wiring for a year or so, I felt I had the skills to at least start tackling this project. 
       </p>
 
-      <!-- Mid-page photos -->
       <div class="photos">
-        <img src="../images/project-1-detail-a.jpg" alt="Describe this photo" />
-        <img src="../images/project-1-detail-b.jpg" alt="Describe this photo" />
-        <img src="../images/project-1-detail-c.jpg" alt="Describe this photo" />
+        <img src="/images/Speeduino/day1.JPG" alt="Speeduino after day 1 of soldering" />
+          <figcaption>The main board after ~5 hours of soldering. </figcaption>
+        <img src="/images/Speeduino/day2.JPG" alt="Speeduino after day 2 of soldering" />
+          <figcaption>The main board after another ~5 hours of work. </figcaption>
+        <img src="/images/Speeduino/banner.JPG" alt="Speeduino after day 3 of soldering" />
+          <figcaption>The main board now with all components accounted for, and header wires connected.</figcaption>
       </div>
 
-      <h3>Challenges</h3>
+      <h3>The case</h3>
       <p>
-        What was unexpectedly hard? What didn't work the first time?
-        This is usually the most interesting part to read.
+        The component kit I bought featured a 40 pin computer connector, and the speeduino board had pads integrated spaced to match that. That is fine but I didn't like the idea of having my car's reliability dependant on a connector which fundamentally was
+        was designed to be used in a static, mostly vibration free environment. <br> <br>
+
+        Having had good experience with Deutsch connectors in both FSAE and at work, I decided it would be nicer if I integrated my case with three DTM 12-pin receptacles. 
       </p>
-      <ul>
-        <li>First challenge and how you got past it.</li>
-        <li>Second challenge and how you got past it.</li>
-      </ul>
+
+      <div class="photos">
+        <img src="/images/Speeduino/speeduino1.png" alt="Speedycase" />
+          <figcaption>My speeduino case </figcaption>
+        <img src="/images/Speeduino/speedycase2 (2).png" alt="case2" />
+          <figcaption>3x 12pin DTM, and USB connection for tuning</figcaption>
+        <img src="/images/Speeduino/speedycase2.png" alt="CAD derived header cable lengths" />
+          <figcaption>Since everything was in CAD anyway, I decided it would be worthwhile modelling each connection: Pad-to-pin. This allowed<br>
+          me to cut each wire colour to near to the ideal length for neat management and strain relief.</figcaption>
+      </div>
 
       <h3>Results</h3>
       <p>
@@ -72,6 +82,11 @@
       <p>
         Hindsight notes. What would you change if you started over?
       </p>
+
+      <ul>
+        <li>First challenge and how you got past it.</li>
+        <li>Second challenge and how you got past it.</li>
+      </ul>
 
     </div>
   </main>

@@ -27,10 +27,16 @@
     <!-- Main photo -->
     <figure>
       <img class="photo-single" src="/images/FSAE/Banner1.jpg" alt="Describe what's shown" />
-      <figcaption>RMIT Electric Racing's R19e after winning FS-Sydney outright.</figcaption>
+      <figcaption>RMIT Electric Racing's R19e after winning the EV class at FS-Sydney.</figcaption>
     </figure>
 
     <div class="detail-body">
+
+      <h3>A large amount of content warning</h3>
+      <p>
+        FSAE was my obsession for three years. I learnt so much and feel so passionate about my time on the FSAE team at RMIT. This section is probably going to be unnecessarily long, wordy and borderline lectuer-ey. 
+        I've tried my hardest to keep it short but I didn't succeed.
+      </p>
 
       <h3>Background on Formula Student</h3>
       <p>
@@ -48,7 +54,7 @@
 
         <p>
         I would argue that the biggest lesson in Formula Student is this: don't get bogged down in detailed design - you have to stay conscious of the bigger picture at all times. It's exceedingly easy as an inexperienced university student to want
-        to go off and prove to yourself (and everyone in your team) that you are competent in the theory, and the tools you've just been taught.<br> <br>FSAE is the place where you realise that the real world is a different place to your exercise book, 
+        to go off and prove to yourself (and everyone in your team) that you are competent in the theory, and the tools you've just been taught in class.<br> <br>FSAE is the place where you realise that the real world is a different place to your exercise book, 
         or CAD/ CAE. If you get lost in details, your timelines will slip, you and your team will have less time to fix all the things which will inevitably go wrong in early testing. Remember this car is custom made from the ground up by newly educated 
         engineers. If your car doesn't work it's not going to be very fast.
         <br><br>
@@ -61,7 +67,7 @@
         there was little to no academic or really any tangible benefit for your thousands of hours of dedication. Students were volunteers and gained nothing but experience for their trouble. <br><br>
         
         I'd argue however that this experience was the best of my engineering career so far. Total design freedom (at least within the rules) and a team of likeminded, motivated, and smart people to work with. Working
-        on an FSAE team is like working at a startup, working on cutting edge technology. Communication is critical, you learn so much more than in classes. <br><br>
+        on an FSAE team is like working at a startup, working on cutting edge technology. Communication is critical, and you learn so much more than in classes. <br><br>
         
         It will be hard for me to do justice for the work I did in FSAE since I spent definitely thousands of hours spanning more than three years on RMIT's Electric Racing team (now called <a href="https://www.rmitmotorsport.com/" target="_blank">RMIT Motorsport</a>).
         </p>
@@ -89,7 +95,7 @@
         hitting timelines, and pulling all nighters before deadlines with the team.<br><br>Some nerdy specs of R19e off the top of my head:
         <ul>
         <li>Drivetrain: Single rear motor, EMRAX228 - Chain drive through Drexler two-way LSD.</li>
-        <li>Vehicle Dynamics: Double unequal length carbon fibre a-arms, pushrod actuated fully adjustable springs and dampers</li>
+        <li>Vehicle Dynamics: Double unequal length carbon fibre a-arms, pushrod actuated adjustable springs and dampers</li>
         <li>Chassis: Full composite monocoque, laser cut aluminium mould, a technique invented by RMIT Electric Racing saving significant time and money vs a traditional plug and mould technique.</li>
         <li>Aerodynamics: Full aero package developed cohesively, extra focus placed on diffuser and underbody. Enclosed sidepods for cooling efficiency. Coefficent of lift by unit area (ClA) roughly -1.8.</li>
         <li>ECU: Custom hardware and firmware developed by RMIT Electric Racing students</li>
@@ -102,7 +108,7 @@
       </p>
       <h3>2020 Season</h3>
       <p>
-        2020 started with our clean sweep of Formula Student Sydney. We won every dynamic event and therefore won the EV class outright. Our car was reliable and fast, and our small team now knew how to run it. It softened the blow of losing the position
+        2020 started with our clean sweep of Formula Student Sydney. Having proven myself to the established team through 2019, I was invited to be one of only ~10 people who ran the car in Sydney. We won every dynamic event and therefore won the EV class outright. Our car was reliable and fast, and our small team now knew how to run it. It softened the blow of losing the position
         we felt the car/ team deserved for the earlier competition.
       </p>
       <div class="photos">
@@ -120,23 +126,27 @@
         <ul>
         <li> Simulations done manually, no automation at all. Every new piece of geometry must be meshed, solved, and post processed manually. It took at least a day of focused, deliberate work to complete one simulation, if nothing went wrong.</li>
         <li> Computational resources were more or less non-existent. There were some murmurs that RMIT had gifted some old servers to the team, but nobody had any details and they weren't available for use. 
-          I used my laptop to solve early simulations. Because the computing power was so limited, these were almost certainly all wrong.
-        </li>
-        <li> </li>
-       
+          I used my laptop to solve early simulations. Because the computing power was so limited, these were almost certainly all wrong. </li>
         </ul>
+
+        Something I will say in my defence of what you're about to see is, I was at least methodical about starting with simple simulations and slowly building up complexity more and more as I better understood the process.
       </p>
 
       <!-- Mid-page photos -->
       <div class="photos">
-        <img src="../images/project-1-detail-a.jpg" alt="a photo" />
-        <img src="../images/project-1-detail-b.jpg" alt="another photo" />
-        <img src="../images/project-1-detail-c.jpg" alt= "photo the 3rd" />
+        <img src="/images/FSAE/crigne.jpg" alt="Messy spreadsheet" />
+          <figcaption>I definitely started at the bottom. My method of post processing was taking force measurements, taking stabs at what was happening, and throwing it all <br>
+            messily into an excel spreadsheet.</figcaption>
       </div>
 
-      <h3>title</h3>
+      <h3>CFD Automation</h3>
       <p>
-        para
+        I had never attempted anything really seriously computationally intensive, nor ever tried to script anything before. I could see how much time it would save me personally, but more importantly, I knew that this was critical in ensuring that our 
+        team could compete in development rate. The car I might design after all this work is only a reflection on the strengths of the team who build it. Racing is really just a development race between groups of engineers, with added chaos sometimes, 
+        but that's generally what it is.<br><br>
+
+        FLUENT TEXT USER INTERFACE was the order of the year. I found a basic FSAE TUI journal file in an online youtube video. It was basic, but it had mesh improvement, definition of rotating wheels, unique mesh settings for a front wing, 
+        forward part of chassis, wheels and thats about it
       </p>
       <ul>
         <li>dot pnt</li>

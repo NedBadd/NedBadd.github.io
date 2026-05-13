@@ -288,24 +288,62 @@
           <figcaption>R21/2e at launch night. I shudder to think how many thousands of hours of my life it took to get to this point, but its cool to see all this work have a moment in the sun.</figcaption>
       </div>
 
-      <h3>CFD Automation FROM HERE ONWARDS IS STILL UNDER CONTRUCTION</h3>
+      <h3>Final Year Capstone Project</h3>
+      <p>
+        I chose to use my Capstone project to double down on FSAE aerodynamic design work. I felt I had progressed a long way since I did the design for the R22e. I was very interested in the fundamentals aerodynamic design and knew that just performing the manufacturing
+        duties for the aero kit I had already done wouldn't be satisfying. I had more ideas I needed to try, and felt I would be working on improving my CFD workflow automation and scripting further regardless of if it counted for marks or not.<br><br>
+        
+        The Capstone project was essentially a holistc, top level clean sheet of the overarching concept which the entire FSAE car package was built around. Thanks to numerous factors, the team had never really been able to have a round table discussion
+        around comprimises between subsystems, and (mechanical development at least) was hence disjointed.<br><br>
+
+        I felt uniquely placed to approach this problem, from the aerodynamic perspective at least.<br><br>
+
+        The strategy was this:
+        <ul>
+        <li> Spend time early in the year on honing automation tools (Sharpen your axe).</li>
+        <li> Get computational resources in order, soon the bottleneck of CFD setup would be removed, so computing power had to rise to match to achieve higher productivity. </li>
+        <li> Only after the above, conduct clean sheet research to prove the performance (especially aero) is there, if the team is willing to make comprimises in other subsystems.</li>
+        </ul>
+      </p>
+
+      <h3>CFD Automation</h3>
       <p>
         I had never attempted anything really seriously computationally intensive, nor ever tried to script anything before. I could see how much time it would save me personally, but more importantly, I knew that this was critical in ensuring that our 
-        team could compete in development rate. The car I might design after all this work is only a reflection on the strengths of the team who build it. Racing is really just a development race between groups of engineers, with added chaos sometimes, 
+        team could compete in development rate. Racing is really just a development race between groups of engineers, with added chaos sometimes, 
         but that's generally what it is.<br><br>
 
-        FLUENT TEXT USER INTERFACE was the order of the year. I found a basic FSAE TUI journal file in an online youtube video. It was basic, but it had mesh improvement, definition of rotating wheels, unique mesh settings for a front wing, 
+        FLUENT text user interface or TUI was the order of the year. The following spans my total three years on the team. I found a basic FSAE TUI journal file in an online youtube video. It was basic, but it had mesh improvement, definition of rotating wheels, unique mesh settings for a front wing, 
         forward part of chassis, wheels and thats about it. It was a modest starting point.<br><br>
 
-        At this point I was still working in named selections, where you use the names of your imported CAD bodies to set your mesh controls. Further, there were intermediate steps between CAD (Solidworks) and CFD, where you manually create the bodies of influence
-        like wake mesh volumes etc.
+        For the R22e design work, there were intermediate steps between CAD (Solidworks) and CFD, where you manually create the bodies of influence like wake mesh volumes etc. 
+
+        Over the course of years, I built up complexity and capability in my code. I shifted to the "wrapping" or "fault tolerant" means of meshing. Generated bodies of influence inside FLUENT rather than in Spaceclaim. Paired my Solidworks
+        CAD assembly with my code, so mesh sizing was consistent and sensical. Created mesh improve protocols which solved a lot of poor quality element issues. I developed post processing almost from the ground up. 
+        Consistent visualisation of the data allowed for more accurate assessment of geometry and flow structures. 
+      </p>
+      
+      <div class="photos">
+        <img src="/images/FSAE/r21e.gif" alt="Total Pres sweep gif" />
+          <figcaption>My post processing (only a component of my script) automatically produced this series of images that could be used to create this gif. It is showing total pressure in planes<br> 
+            along the car. This is the best one for understanding wakes, vorticity and where energy is being used effectively or lost.</figcaption>
+        <img src="/images/FSAE/velupsweep.gif" alt="Vel up sweep gif" />
+          <figcaption> Again, automatically generated. This is Velocity starting from the ground slicing upwards. These images can be useful for viewing wake structures and undertray development.</figcaption>
+      </div>
+
+      <p>
+        After hundreds of hours working on code, I had reached the point where all you had to do was feed the journal file to the now operational Electric Racing server, and hit go. ~7-8 hours later you would have your results, post processed, ready for 
+        you to interpret. But I wanted to go further than this. For things like aeromapping, or slot gap or AoA tuning you can often export multiple conditions/ CAD models at once. Why not make the server run them all end-to-end?<br><br>
+
+        I created a windows batch file which would call FLUENT and a particular CAD assembly, spend 8 hours solving, then move onto the next. 
       </p>
 
-      <h3>Final year project/ Capstone Project</h3>
-      <p>
-        I chose to use my Capstone project to double down on FSAE design work. I felt I had progressed a long way since I did the design for the R22e front wing and side aero. I was very interested in the fundamentals aerodynamic design and knew that just performing the manufacturing
-        duties for the aero kit I had already done wouldn't be satisfying. I had more ideas I needed to try, and felt I would be working on improving my scripting further regardless of if it counted for marks or not.
-      </p>
+      <div class="photos">
+        <img src="/images/FSAE/servers.jpg" alt="RMIT Servers" />
+          <figcaption>I commissioned and setup all software needed to be able to run these servers remotely. Using a service like Google Drive our team could remote in and solve. <br>
+            Each server had 128gb RAM, and 32 core processors. They could solve ~45million element CFD simulations in ~7-8 hours.</figcaption>
+        <img src="/images/FSAE/velupsweep.gif" alt="Vel up sweep gif" />
+          <figcaption> Again, automatically generated. This is Velocity starting from the ground slicing upwards. These images can be useful for viewing wake structures and undertray development.</figcaption>
+      </div>
 
       <h3>Big takeaways regarding FSAE Aerodynamic Design</h3>
       <p>
@@ -314,7 +352,6 @@
           process were to fail. I also had a serious legacy to leave newer members on the team, who weren't privvy to how much suffering my code would save them.
         </li>
         <li> Open wheel aerodynamics is all about wake management. FSAE is unique in the operating conditions our aerodynamic components must operate in are extreme. High yaw, slow speed. </li>
-        
         </ul>
       </p>
       

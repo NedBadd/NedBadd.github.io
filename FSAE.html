@@ -332,7 +332,7 @@
 
       <p>
         After hundreds of hours working on code, I had reached the point where all you had to do was feed the journal file to the now operational Electric Racing server, and hit go. ~7-8 hours later you would have your results, post processed, ready for 
-        you to interpret. But I wanted to go further than this. For things like aeromapping, or slot gap or AoA tuning you can often export multiple conditions/ CAD models at once. Why not make the server run them all end-to-end?<br><br>
+        you to interpret. We're talking more than 4000 lines of code. But I wanted to go further than this. For things like aeromapping, or slot gap or AoA tuning you can often export multiple conditions/ CAD models at once. Why not make the server run them all end-to-end?<br><br>
 
         I created a windows batch file which would call FLUENT and a particular CAD assembly, spend 8 hours solving, then move onto the next. 
       </p>
@@ -340,18 +340,32 @@
       <div class="photos">
         <img src="/images/FSAE/servers.jpg" alt="RMIT Servers" />
           <figcaption>I commissioned and setup all software needed to be able to run these servers remotely. Using a service like Google Drive our team could remote in and solve. <br>
-            Each server had 128gb RAM, and 32 core processors. They could solve ~45million element CFD simulations in ~7-8 hours.</figcaption>
-        <img src="/images/FSAE/velupsweep.gif" alt="Vel up sweep gif" />
-          <figcaption> Again, automatically generated. This is Velocity starting from the ground slicing upwards. These images can be useful for viewing wake structures and undertray development.</figcaption>
+            Each server had 128gb RAM, and 32 core processors. They could solve ~45million element CFD simulations in ~7-8 hours.<br>
+            At one point I even had to open a server case and diagnose an issue. It turned out one of the RAM sticks was not locked into the board properly. <br>
+            Snapped back in, it ran like new.</figcaption>
       </div>
 
-      <h3>Big takeaways regarding FSAE Aerodynamic Design</h3>
+      <h3>The new design</h3>
+
+      <p>
+        The goal at the outset was to shoot for a ClA of -6.5 or less. While I didn't achieve that with everything else I had to do, I feel I learnt some very important lessons, and got close with -4.5 ClA with almost no effort spent on tuning wings.
+      </p>
+
+      <div class="photos">
+        <img src="/images/FSAE/r23e-tak3.gif" alt="RMIT Servers" />
+          <figcaption>Geometry of my aero centric FSAE car concept.</figcaption>
+        <img src="/images/FSAE/4.5ClAgif.gif" alt="RMIT Servers" />
+          <figcaption>Total pressure sweep of this concept.</figcaption>
+      </div>
+
+      <h3>Big takeaways</h3>
       <p>
         <ul>
         <li> It was absolutely worthwhile investing the many many days developing my scripting. I could achieve in an hour what used to take weeks. As the architect of the entire system, I knew exactly what to do if any step in the 
           process were to fail. I also had a serious legacy to leave newer members on the team, who weren't privvy to how much suffering my code would save them.
         </li>
-        <li> Open wheel aerodynamics is all about wake management. FSAE is unique in the operating conditions our aerodynamic components must operate in are extreme. High yaw, slow speed. </li>
+        <li> Open wheel aerodynamics is all about wake management. The wheel wake is extremely disturbed air and if that falls on your downforce producing parts it would be better if they didn't exist at all.
+          FSAE is unique in the operating conditions our aerodynamic components must operate in are extreme. High yaw, slow speed. </li>
         </ul>
       </p>
       
